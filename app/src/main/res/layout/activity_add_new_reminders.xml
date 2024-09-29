@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2e2e2e"
+    tools:context=".activities.AddNewReminders">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/baseline_keyboard_backspace_24"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/save_reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_save_btn"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:padding="7dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_back"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:includeFontPadding="false"
+                android:text="Current Date"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/input_note_title"
+                android:layout_width="360dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/textDateTime"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/averia_gruesa_libre"
+                android:hint="Note Title"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="30sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_note_title"
+                android:layout_centerHorizontal="true">
+
+                <View
+                    android:id="@+id/view_reminder"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/bg_note"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/pin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Reminder"
+                    android:background="@null"
+                    android:fontFamily="@font/averia_gruesa_libre"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textMultiLine"
+                    android:maxLines="8"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:singleLine="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    app:layout_constraintWidth_percent=".7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/bottom_sheet_reminder"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

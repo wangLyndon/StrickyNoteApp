@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:title="My Notes"
+        app:cnb_iconColor="#53FA27"/>
+
+    <item
+        android:id="@+id/reminder"
+        android:icon="@drawable/baseline_create_24"
+        android:title="Reminder"
+        app:cnb_iconColor="#FDD01E"/>
+
+    <item
+        android:id="@+id/shoppingList"
+        android:icon="@drawable/baseline_format_list_numbered_24"
+        android:title="Shppoing List"
+        app:cnb_iconColor="#FB62DB"/>
+
+</menu>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/bottom_sheet"
+    app:behavior_peekHeight="40dp"
+    android:id="@+id/bottom_layout"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/bottom_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Click Me"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/averia_gruesa_libre"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewColor1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_note_color"/>
+
+            <ImageView
+                android:id="@+id/imageColor1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/baseline_done_24"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewColor2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_note_color2"/>
+
+            <ImageView
+                android:id="@+id/imageColor2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewColor3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_note_color3"/>
+
+            <ImageView
+                android:id="@+id/imageColor3"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewColor4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_note_color4"/>
+
+            <ImageView
+                android:id="@+id/imageColor4"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewColor5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_note_color5"/>
+
+            <ImageView
+                android:id="@+id/imageColor5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/viewColor6"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_note_color6"/>
+
+            <ImageView
+                android:id="@+id/imageColor6"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                app:tint="@color/white"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical">
+        
+        <ImageView
+            android:id="@+id/add_img"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/baseline_image_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Image"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"/>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_margin="7dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables"
+        android:id="@+id/remove"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/baseline_delete_24"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/averia_gruesa_libre"
+            android:includeFontPadding="false"
+            android:text="Delete note"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    
+</LinearLayout>
